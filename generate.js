@@ -1,13 +1,15 @@
 import { Configuration, OpenAIApi } from "openai";
 import { writeFileSync } from "fs";
 import fetch from "node-fetch";
+import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+dotenv.config()
 
 const configuration = new Configuration({
-    apiKey: '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',
+    apiKey:process.env.OPENAI_API_KEY,
 });
 
 const openai = new OpenAIApi(configuration);
-const prompt = "a ship sailing through a river of stars and galaxies";
+const prompt = "A 3D render of an astronaut walking in a green desert";
 
 const result = await openai.createImage({
     prompt,
