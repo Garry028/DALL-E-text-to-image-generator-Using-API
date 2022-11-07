@@ -1,1 +1,1 @@
-# DALL-E-text-to-image-generator-Using-API
+# DALL-E-Text-To-Image-Generator-Using-API
