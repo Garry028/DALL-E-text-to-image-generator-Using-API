@@ -9,7 +9,7 @@ const configuration = new Configuration({
 });
 
 const openai = new OpenAIApi(configuration);
-const prompt = "A 3D render of an astronaut walking in a green desert";
+const prompt = "A computer from the in 90s in the style of vaporwave";
 
 const result = await openai.createImage({
     prompt,
@@ -19,7 +19,7 @@ const result = await openai.createImage({
 });
 
 const url = result.data.data[0].url;
-console.log(url);
+// console.log(url);
 
 // save img to disk
 const imgResult = await fetch(url);
