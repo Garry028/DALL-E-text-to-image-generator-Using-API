@@ -9,7 +9,7 @@ const configuration = new Configuration({
 });
 
 const openai = new OpenAIApi(configuration);
-const prompt = "A computer from the in 90s in the style of vaporwave";
+const prompt = "Astronut sitting in front of tajmahal";
 
 const result = await openai.createImage({
     prompt,
